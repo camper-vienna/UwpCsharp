@@ -31,6 +31,16 @@ namespace UwpCsharp
         {
             SentrySdk.Init("https://5fd7a6cda8444965bade9ccfd3df9882@sentry.io/1188141");
 
+
+            UnhandledException += (sender, e) => 
+            {
+                SentrySdk.AddBreadcrumb(e.Message, level: Sentry.Protocol.BreadcrumbLevel.Critical);
+                SentrySdk.CaptureException(e.Exception);
+
+                // If the application code is expected to handle this (set e.Handled = true) then do not close the SDK here!
+                SentrySdk.Close();
+            };
+
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
