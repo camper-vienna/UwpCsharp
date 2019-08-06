@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -40,7 +41,7 @@ namespace UwpCsharp
                 ThrowUnhandledExceptionClick(this, e);
             }
             catch (Exception ex)
-            {
+            {   
                 SentrySdk.WithScope(s =>
                 {
                     s.AddBreadcrumb(
@@ -56,5 +57,18 @@ namespace UwpCsharp
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         private void TheOffender() => throw new Exception("No one will catch me!");
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            unsafe
+            {
+
+                var nativeObject = new WindowsRuntimeComponent1.Class1();
+
+                //int* foo = (int*)23424;
+                //int bar = *foo + 42;
+                //Console.WriteLine(bar);
+            }
+        }
     }
 }

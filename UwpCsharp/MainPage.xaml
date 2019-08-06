@@ -11,6 +11,7 @@
     <Grid>
         <Button x:Name="Throw_Unhandled_Exception" Content="Throw Unhandled Exception" Margin="314,378,0,0" VerticalAlignment="Top" Click="ThrowUnhandledExceptionClick" AllowDrop="True"/>
         <Button Content="Handled" Margin="815,378,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Button" Margin="1183,225,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Page>

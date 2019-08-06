@@ -1,0 +1,8 @@
+﻿  Class1.cpp
+     Creating library C:\Users\sentry\source\repos\UwpCsharp\Release\WindowsRuntimeComponent1\WindowsRuntimeComponent1.lib and object C:\Users\sentry\source\repos\UwpCsharp\Release\WindowsRuntimeComponent1\WindowsRuntimeComponent1.exp
+  Generating code
+  15 of 65 functions (23.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  WindowsRuntimeComponent1.vcxproj -> C:\Users\sentry\source\repos\UwpCsharp\Release\WindowsRuntimeComponent1\WindowsRuntimeComponent1.dll
